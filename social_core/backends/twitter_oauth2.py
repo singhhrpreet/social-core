@@ -43,6 +43,8 @@ class TwitterOAuth2(BaseOAuth2):
     USE_PKCE = True
 
     def get_user_details(self, response):
+        print("Twitter OAuth2 Response:")
+        print(response)
         """Return user details from Twitter account"""
         user = response
         user_id = user["id"]
